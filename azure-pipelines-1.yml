@@ -42,3 +42,5 @@ steps:
     feedPublish: '$(System.TeamProject)/helmTest'
     allowPackageConflicts: true
   condition: succeeded()
+
+- task: PublishBuildArtifacts@1
