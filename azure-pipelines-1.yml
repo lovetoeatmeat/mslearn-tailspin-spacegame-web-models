@@ -39,6 +39,13 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    feedPublish: '$(System.TeamProject)/aaa'
+    feedPublish: '$(System.TeamProject)/helmTest'
     allowPackageConflicts: true
   condition: succeeded()
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '<service-connection-name>'
+    appType: 'webAppLinux'
+    appName: '<app-name>'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
