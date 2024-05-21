@@ -39,6 +39,6 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    feedPublish: '$(System.TeamProject)/mightz'
+    feedPublish: '$(System.TeamProject)/helTest'
     allowPackageConflicts: true
   condition: succeeded()
