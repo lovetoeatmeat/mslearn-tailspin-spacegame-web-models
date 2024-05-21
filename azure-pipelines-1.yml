@@ -45,7 +45,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<service-connection-name>'
+    azureSubscription: 'mightz'
     appType: 'webAppLinux'
-    appName: '<app-name>'
+    appName: 'webAPPMightZ'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
